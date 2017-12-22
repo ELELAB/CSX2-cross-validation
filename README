@@ -1,0 +1,24 @@
+usage: CSX2script.py [-h] [-f file.dat] [-shift N] [-chains A B [A B ...]]
+                     [--ppm] [--ppmold] [--v]
+
+This script calculates X^2 values based on experimental values and predicted values.
+Chisquare is calculated as:
+
+     ((CS_pred - CS_exp)**2)/(CS_exp) 
+
+..where CS_pred is the cummulative average predicted chemical shifts and CS_exp is the experimentally obtained chemical shifts.
+Predictors can be PPM (old version, needs pre-run of ppm_linux generating proton_details.dat and bb_details.dat files (recommended for first run)). 
+PPM_One new version (ppm_linux needed in folder and example.pdb structure file).
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -f file.dat           Experimental chemical shifts file in NMRstar format
+                        (Default: ChemicalShifts.dat)
+  -shift N              Shift the sequence number of the experimental chemical
+                        shifts by N residues
+  -chains A B [A B ...]
+                        Chains in the pdb (only supported for PPM_new)
+  --ppm                 Run new PPM_One prediction
+  --ppmold              Run old PPM prediction (needs bb_details.dat and
+                        proton_details.dat)
+  --v                   Run the script in verbose
