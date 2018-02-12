@@ -1,8 +1,22 @@
+#    Copyright (C) 2018 Matteo Lambrughi, Matteo Tiberti, Maria Francesca Allega, Valentina Sora, Mads Nygaard, Agota Toth, Juan Salamanca Viloria, Emmanuelle Bignon, Elena Papaleo <elenap@cancer.dk>
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+
+#   This program is distributed in the hope that it will be useful,
+#   but WITHOUT ANY WARRANTY; without even the implied warranty of
+#   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#   GNU General Public License for more details.
+
+#   You should have received a copy of the GNU General Public License
+#   along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 #!/usr/bin/env python
-# By Mads Nygaard
 # Script for calculating chi-square differences between the output of PPM_one in the bb_details.dat and proton_details.dat file and experimental values in NMRstar format.
 # Updated with 1/(n-1) for average of species (2016-06-13)
-
+__date__ = "2018_02_09"
+__authors__ = "Mads Nygaard"
 # Dependencies
 import subprocess
 import os.path
