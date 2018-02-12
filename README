@@ -1,24 +1,20 @@
-usage: CSX2script.py [-h] [-f file.dat] [-shift N] [-chains A B [A B ...]]
-                     [--ppm] [--ppmold] [--v]
+Computational Biology Laboratory, Danish Cancer Society Research Center, Strandboulevarden 49, 2100, Copenhagen, Denmark
+
+CSX2.py can be used to compare chemical shifts calculated from simulated ensemble of structures with experimental chemical shifts from NMRspectroscopy.
+A guide to the script's options is available running:
+python CSX2.py -h
 
 This script calculates X^2 values based on experimental values and predicted values.
 Chisquare is calculated as:
 
      ((CS_pred - CS_exp)**2)/(CS_exp) 
 
-..where CS_pred is the cummulative average predicted chemical shifts and CS_exp is the experimentally obtained chemical shifts.
-Predictors can be PPM (old version, needs pre-run of ppm_linux generating proton_details.dat and bb_details.dat files (recommended for first run)). 
-PPM_One new version (ppm_linux needed in folder and example.pdb structure file).
+where CS_pred is the cummulative average predicted chemical shifts and CS_exp is the experimentally obtained chemical shifts.
+Predictors can be carried out with PPM (old version, needs pre-run of ppm_linux generating proton_details.dat and bb_details.dat files (recommended for first run)). 
+PPM_One new version (ppm_linux need to be executable in the same folder of the pdb file example.pdb).
 
-optional arguments:
-  -h, --help            show this help message and exit
-  -f file.dat           Experimental chemical shifts file in NMRstar format
-                        (Default: ChemicalShifts.dat)
-  -shift N              Shift the sequence number of the experimental chemical
-                        shifts by N residues
-  -chains A B [A B ...]
-                        Chains in the pdb (only supported for PPM_new)
-  --ppm                 Run new PPM_One prediction
-  --ppmold              Run old PPM prediction (needs bb_details.dat and
-                        proton_details.dat)
-  --v                   Run the script in verbose
+In this repository and example is provided with a pdb file (example.pdb) and the corresponding experimental CS (ChemicalShifts.dat).
+
+When using the CSX2.py for publication or presentation please cite:
+
+Matteo Lambrughi, Matteo Tiberti, Maria Francesca Allega, Valentina Sora, Mads Nygaard, Agota Toth, Juan Salamanca Viloria, Emmanuelle Bignon, Elena Papaleo*, Analyzing biomolecular ensembles, in preparation.
